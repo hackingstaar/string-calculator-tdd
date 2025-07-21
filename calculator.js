@@ -16,8 +16,15 @@ const add = (numbers) => {
     numbers = numbers.slice(match[0].length);
   }
 
-  // it will retun the single number as well sum of comma-seprated numbers and also support new line as delimiters
   const parts = numbers.split(delimiter).map(Number);
+  const negatives = parts.filter((n) => n < 0);
+
+  // checking here for any negative numbers
+  if (negatives.length > 0) {
+    throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
+  }
+
+  // it will retun the single number as well sum of comma-seprated numbers and also support new line as delimiters
   return parts.reduce((sum, num) => sum + num, 0);
 };
 
