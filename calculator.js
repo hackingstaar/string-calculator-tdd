@@ -7,8 +7,9 @@ const add = (numbers) => {
   // if numbers is empty then returning 0
   if (numbers === "") return 0;
 
-  // it will retun the single number
-  return parseInt(numbers);
+  // it will retun the single number as well sum of comma-seprated numbers
+  const parts = numbers.split(",").map(Number);
+  return parts.reduce((sum, num) => sum + num, 0);
 };
 
 module.exports = { add };
