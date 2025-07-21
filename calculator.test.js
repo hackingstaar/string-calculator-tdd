@@ -19,3 +19,8 @@ test('returns sum of two comma-separated numbers', () => {
 test('returns sum of multiple numbers', () => {
   expect(add("1,2,3,4")).toBe(10);
 });
+
+//  test case to check newlines between numbers
+test('supports newlines between numbers', () => {
+  expect(add("1\n2,3")).toBe(6);
+});
