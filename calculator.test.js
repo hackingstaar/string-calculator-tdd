@@ -14,3 +14,8 @@ test('returns number for single input', () => {
 test('returns sum of two comma-separated numbers', () => {
   expect(add("6,4")).toBe(10);
 });
+
+//  test case for multiple numbers string
+test('returns sum of multiple numbers', () => {
+  expect(add("1,2,3,4")).toBe(10);
+});
