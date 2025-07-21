@@ -1,4 +1,9 @@
-const { add } = require("./stringCalculator");
+const { add } = require("./calculator");
+
+// test case to check error for non string params
+test('throws error on non string values', () => {
+  expect(() => add(1)).toThrow("Please enter valid number");
+});
 
 // test case for empty string
 test("returns 0 for empty string", () => {

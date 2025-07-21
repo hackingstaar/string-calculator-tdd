@@ -16,6 +16,7 @@ const add = (numbers) => {
     numbers = numbers.slice(match[0].length);
   }
 
+  // spliting the numbers based on delimiters
   const parts = numbers.split(delimiter).map(Number);
   const negatives = parts.filter((n) => n < 0);
 
